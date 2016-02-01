@@ -55,3 +55,27 @@ class cls_hello_world_validate_py(object):
 
     def run(self):
         print "Hello World"
+
+@pytool()
+class cls_hello_world_othermethod_py(object):
+    def foo(self):
+        pass
+
+    def run(self):
+        print "Hello World"
+
+@pytool()
+class cls_hello_world_init_py(object):
+    def init(self):
+        pass
+
+    def run(self):
+        print "Hello World"
+
+@pytool()
+class cls_hello_world_setup_py(object):
+    def setup(self):
+        pass
+
+    def run(self):
+        print "Hello World"
