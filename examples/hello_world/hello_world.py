@@ -47,3 +47,11 @@ class cls_hello_world_perl(object):
 class cls_hello_world_py(object):
     def run(self):
         print "Hello World"
+
+@pytool()
+class cls_hello_world_validate_py(object):
+    def validate(self):
+        pass
+
+    def run(self):
+        print "Hello World"
