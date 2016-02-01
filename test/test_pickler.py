@@ -105,3 +105,21 @@ def test_storing_embdded_pipeline():
     assert len(emb) == 1
     data = pickle.dumps(emb)
     assert data is not None
+
+@jip.pytool()
+class mytool(object):
+    """
+    usage:
+        tool <name>
+    """
+    def validate(self):
+        pass
+
+    def run(self):
+        pass
+
+def test_pickels_job_with_instance_method():
+
+    p = jip.Pipeline()
+    p.run('mytool', name='foo')
+    jobs = jip.create_jobs(p)
